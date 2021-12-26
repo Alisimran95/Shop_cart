@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* shopping cart */
+.shopping-cart{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    cursor: pointer;
+}
+.shopping-cart i{
+    font-size: 26px;
+}
+.shopping-cart #count{
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 20px;
+    height:auto;
+    border-radius: 50%;
+}
+
+/* Show Carts */
+#show-carts{
+    position: relative;
+    top: 100px;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: red;
+    z-index: 1000;
+    color: white;
+    height: auto;
+    display: none;
+}
+#show-carts .show-row{
+    display: flex;
+    flex-direction: column;
+}
+#show-carts .show-carts-item{
+    display: flex;
+    justify-content: space-around;
+}
+#show-carts img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+.fa-trash-alt{
+    cursor: pointer;
+}
+#close{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 11111;
+}
+#shop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+}
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 0.3s;
+    cursor: pointer;
+}
+.product .add-btn{
+    background-color: red;
+    width: 84%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.product .add-btn a{
+    visibility: hidden;
+    color: white;
+    text-decoration: none;
+}
+.product:hover .add-btn{
+    height: 50px;
+    top: -100;
+    visibility: visible;
+}
+.product:hover  .add-btn a{
+    visibility: visible;
+}
